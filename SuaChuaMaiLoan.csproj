@@ -126,6 +126,7 @@
     </Compile>
     <Compile Include="Models\Categories.cs" />
     <Compile Include="Models\Flavour.cs" />
+    <Compile Include="Models\SystemContact.cs" />
     <Compile Include="Models\Products.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -422,6 +423,7 @@
     <Content Include="Content\fonts\Roboto\Roboto-ThinItalic.ttf" />
     <Content Include="JsonModels\flavour.json" />
     <Content Include="JsonModels\Categories.json" />
+    <Content Include="JsonModels\systemContact.json" />
     <None Include="Properties\PublishProfiles\SuaChuaMaiLoan - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />

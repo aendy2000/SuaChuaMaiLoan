@@ -1,4 +1,24 @@
-﻿<!DOCTYPE html>
+﻿@using SuaChuaMaiLoan.Models
+@using Newtonsoft.Json
+@{
+    string filePathFlavour = Server.MapPath("~/JsonModels/flavour.json");
+    string jsonTextFlavour = System.IO.File.ReadAllText(filePathFlavour);
+    List<Flavour> resultFlavour = JsonConvert.DeserializeObject<List<Flavour>>(jsonTextFlavour);
+    resultFlavour = resultFlavour.OrderByDescending(o => o.Name).ToList();
+    Session["lstFlavour"] = resultFlavour;
+
+    string filePathCategories = Server.MapPath("~/JsonModels/categories.json");
+    string jsonTextCategories = System.IO.File.ReadAllText(filePathCategories);
+    List<Categories> resultCategories = JsonConvert.DeserializeObject<List<Categories>>(jsonTextCategories);
+    resultCategories = resultCategories.OrderByDescending(o => o.Name).ToList();
+    Session["lstCategories"] = resultCategories;
+
+    string filePathSystemContact = Server.MapPath("~/JsonModels/systemContact.json");
+    string jsonTextSystemContact = System.IO.File.ReadAllText(filePathSystemContact);
+    var resultSystemContact = JsonConvert.DeserializeObject<List<SystemContact>>(jsonTextSystemContact);
+    SystemContact resultSystemContacts = resultSystemContact.First();
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Trang chủ</title>
@@ -34,7 +54,6 @@
     <link rel="stylesheet" type="text/css" href="~/Content/css/util.css">
     <link rel="stylesheet" type="text/css" href="~/Content/css/main.css">
     <script src="~/Content/vendor/jquery/jquery-3.2.1.min.js"></script>
-
     <!--===============================================================================================-->
 </head>
 <body class="animsition">
@@ -136,9 +155,18 @@
                                     <a href="@Url.Action("About", "Home")">Giới Thiệu</a>
                                 </li>
                             }
-                            <li>
-                                <a href="contact.html">Contact</a>
-                            </li>
+                            @if (ViewBag.ShowActive == "HomeContact")
+                            {
+                                <li class="active-menu">
+                                    <a href="@Url.Action("Contact", "Home")">Liên Hệ</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li>
+                                    <a href="@Url.Action("Contact", "Home")">Liên Hệ</a>
+                                </li>
+                            }
                         </ul>
                     </div>
 
@@ -228,9 +256,18 @@
                         <a href="@Url.Action("About", "Home")">Giới Thiệu</a>
                     </li>
                 }
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
+                @if (ViewBag.ShowActive == "HomeContact")
+                {
+                    <li class="active-menu">
+                        <a href="@Url.Action("Contact", "Home")">Liên Hệ</a>
+                    </li>
+                }
+                else
+                {
+                    <li>
+                        <a href="@Url.Action("Contact", "Home")">Liên Hệ</a>
+                    </li>
+                }
             </ul>
         </div>
 
@@ -342,117 +379,78 @@
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
     <input hidden id="requestPath" value="@Url.Content("~")" />
+
     <!-- Footer -->
     <footer class="bg3 p-t-75 p-b-32">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-lg-3 p-b-50">
-                    <h4 class="stext-301 cl0 p-b-30">
+                <div class="col-sm-6 col-lg-4 p-b-50" style="padding-left: 40px; padding-right: 40px ">
+                    <h4 class="stext-301 cl0">
                         DANH MỤC
                     </h4>
-
+                    <hr class="bg-light" />
                     <ul>
-                        <li class="p-b-10">
-                            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                                Women
-                            </a>
-                        </li>
-
-                        <li class="p-b-10">
-                            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                                Men
-                            </a>
-                        </li>
-
-                        <li class="p-b-10">
-                            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                                Shoes
-                            </a>
-                        </li>
-
-                        <li class="p-b-10">
-                            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                                Watches
-                            </a>
-                        </li>
-                        <li class="p-b-10">
+                        @foreach (var item in resultCategories)
+                        {
+                            <li class="p-b-10">
+                                <a href="@Url.Action("Product", "Home")" class="stext-107 cl7 hov-cl1 trans-04">
+                                    @item.Name
+                                </a>
+                            </li>
+                        }
+                        <li class="p-b-10 p-t-10">
                             <a href="@Url.Action("Index", "Home")" class="m-all-1">
-                                <img style="width: 60%" src="@Url.Content("~/Content/images/very.png")">
+                                <img style="width: 50%" src="@Url.Content("~/Content/images/very.png")">
                             </a>
                         </li>
                     </ul>
                 </div>
 
-                <div class="col-sm-6 col-lg-3 p-b-50">
-                    <h4 class="stext-301 cl0 p-b-30">
+                <div class="col-sm-6 col-lg-4 p-b-50" style="padding-left: 40px; padding-right: 40px ">
+                    <h4 class="stext-301 cl0">
                         HƯƠNG VỊ
                     </h4>
+                    <hr class="bg-light" />
+                    <ul style="list-style-type: disc; -webkit-columns: 2; -moz-columns: 2; columns: 2; list-style-position: inside;">
 
-                    <ul>
-                        <li class="p-b-10">
-                            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                                Track Order
-                            </a>
-                        </li>
-
-                        <li class="p-b-10">
-                            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                                Returns
-                            </a>
-                        </li>
-
-                        <li class="p-b-10">
-                            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                                Shipping
-                            </a>
-                        </li>
-
-                        <li class="p-b-10">
-                            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                                FAQs
-                            </a>
-                        </li>
+                        @foreach (var item in resultFlavour)
+                        {
+                            <li class="p-b-10">
+                                <a href="@Url.Action("Product", "Home")" class="stext-107 cl7 hov-cl1 trans-04">
+                                    @item.Name
+                                </a>
+                            </li>
+                        }
                     </ul>
                 </div>
 
-                <div class="col-sm-6 col-lg-3 p-b-50">
-                    <h4 class="stext-301 cl0 p-b-30">
+                <div class="col-sm-6 col-lg-4 p-b-50" style="padding-left: 40px; padding-right: 40px">
+                    <h4 class="stext-301 cl0">
                         LIÊN HỆ
                     </h4>
-
-                    <p class="stext-107 cl7 size-201">
-                        Địa chỉ: Tầng 4, tòa nhà Flemington, số 182, đường Lê Đại Hành, phường 15, quận 11, Tp. Hồ Chí Minh.
+                    <hr class="bg-light" />
+                    <p class="stext-107 cl7">
+                        Địa chỉ: @resultSystemContacts.Address
                     </p>
-                    <p class="stext-107 cl7 size-201">
-                        Điện thoại: 1900.636.099
+                    <p class="stext-107 cl7">
+                        Điện thoại: @resultSystemContacts.Phone
                     </p>
-                    <p class="stext-107 cl7 size-201">
-                        Fax: 1900.636.099
-                    </p>
-                    <p class="stext-107 cl7 size-201">
-                        Email: hi@haravan.com
+                    <p class="stext-107 cl7">
+                        Email: @resultSystemContacts.Email
                     </p>
 
                     <div class="p-t-27">
-                        <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-
-                        <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-                            <i class="fa fa-instagram"></i>
-                        </a>
-
-                        <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-                            <i class="fa fa-pinterest-p"></i>
+                        <a target="_blank" href="@resultSystemContacts.Facebook" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+                            <i class="fa fa-facebook"> </i> Facebook
                         </a>
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-lg-3 p-b-50">
-                    <h4 class="stext-301 cl0 p-b-30">
+                @*<div class="col-sm-6 col-lg-3 p-b-50">
+                    <h4 class="stext-301 cl0">
                         Newsletter
-                    </h4>
-
+                    </h4>                    
+                    <hr class="bg-light" />
                     <form>
                         <div class="wrap-input1 w-full p-b-4">
                             <input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email" placeholder="email@example.com">
@@ -465,7 +463,7 @@
                             </button>
                         </div>
                     </form>
-                </div>
+                </div>*@
             </div>
 
             <div class="p-t-40">
@@ -473,7 +471,7 @@
                 <p class="stext-107 cl6 txt-center">
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     Copyright &copy;
-                    <script>document.write(new Date().getFullYear());</script> All rights <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="@Url.Action("Index", "Home")" target="_blank">Sữa Chua Mai Loan.</a> &amp; Powered by <a href="https://fb.com/aendy2000" target="_blank">DangVanTuan</a>
+                    <script>document.write(new Date().getFullYear());</script><a href="@Url.Action("Index", "Home")" target="_blank"> Sữa Chua Mai Loan <i class="fa fa-heart-o" aria-hidden="true"></i></a>. Powered by <a href="#">Dang Van Tuan</a>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
                 </p>
@@ -598,8 +596,8 @@
             })
         });</script>
     <!--===============================================================================================-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc7PnOq3Hxzq6dxeUVaY8WGLHIePl0swY"></script>
-    <script src="~/Content/js/map-custom.js"></script>
+    @*<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc7PnOq3Hxzq6dxeUVaY8WGLHIePl0swY"></script>*@
+    @*<script src="~/Content/js/map-custom.js"></script>*@
 
     <script src="~/Content/js/main.js"></script>
 

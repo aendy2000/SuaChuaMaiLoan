@@ -1,8 +1,5 @@
 ﻿@model IEnumerable<SuaChuaMaiLoan.Models.Products>
-@using SuaChuaMaiLoan.Models
 @{
-    var flavour = Session["lstFlavour"] as List<Flavour>;
-    var categories = Session["lstCategories"] as List<Categories>;
     int i = 0;
     ViewBag.Title = "Home Page";
 }
@@ -27,7 +24,7 @@
                         </div>
 
                         <div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
-                            <a href="product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+                            <a href="@Url.Action("Product", "Home")" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
                                 XEM SẢN PHẨM
                             </a>
                         </div>
@@ -51,7 +48,7 @@
                         </div>
 
                         <div class="layer-slick1 animated visible-false" data-appear="slideInUp" data-delay="1600">
-                            <a href="product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+                            <a href="@Url.Action("Product", "Home")" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
                                 XEM SẢN PHẨM
                             </a>
                         </div>
@@ -75,7 +72,7 @@
                         </div>
 
                         <div class="layer-slick1 animated visible-false" data-appear="rotateIn" data-delay="1600">
-                            <a href="product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+                            <a href="@Url.Action("Product", "Home")" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
                                 XEM SẢN PHẨM
                             </a>
                         </div>
@@ -87,7 +84,7 @@
 </section>
 
 <!-- Banner -->
-<div class="sec-banner bg0 p-t-80 p-b-50">
+<div class="sec-banner bg0 p-t-80">
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
@@ -167,57 +164,53 @@
         </div>
     </div>
 </div>
+<!-- Content page -->
+<section class="bg0 p-t-52">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div class="p-r-0-lg">
+                    <!--  -->
+                    <div class="wrap-pic-w how-pos5-parent">
+                        <img src="~/Content/images/blog-04.jpg" alt="IMG-BLOG">
 
+                        <div class="flex-col-c-m size-126 bg10 how-pos6">
+                            <span class="ltext-102 cl2 txt-center">
+                                ĐÔI NÉT VỀ CHÚNG TÔI
+                            </span>
+
+                            @*<span class="stext-109 cl3 txt-center">
+                                Về chúng tôi
+                            </span>*@
+                        </div>
+                    </div>
+
+                    <div class="p-t-32">
+
+                        <h4 class="ltext-108 cl2 p-b-28">
+                            Sữa Chua Mai Loan – Chất Lượng Tạo Nên Giá Trị Thương Hiệu.
+                        </h4>
+
+                        <p class="stext-117 cl6 p-b-26">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet est vel orci luctus sollicitudin. Duis eleifend vestibulum justo, varius semper lacus condimentum dictum. Donec pulvinar a magna ut malesuada. In posuere felis diam, vel sodales metus accumsan in. Duis viverra dui eu pharetra pellentesque. Donec a eros leo. Quisque sed ligula vitae lorem efficitur faucibus. Praesent sit amet imperdiet ante. Nulla id tellus auctor, dictum libero a, malesuada nisi. Nulla in porta nibh, id vestibulum ipsum. Praesent dapibus tempus erat quis aliquet. Donec ac purus id sapien condimentum feugiat.
+                        </p>
+
+                        <p class="stext-117 cl6 p-b-26">
+                            Praesent vel mi bibendum, finibus leo ac, condimentum arcu. Pellentesque sem ex, tristique sit amet suscipit in, mattis imperdiet enim. Integer tempus justo nec velit fringilla, eget eleifend neque blandit. Sed tempor magna sed congue auctor. Mauris eu turpis eget tortor ultricies elementum. Phasellus vel placerat orci, a venenatis justo. Phasellus faucibus venenatis nisl vitae vestibulum. Praesent id nibh arcu. Vivamus sagittis accumsan felis, quis vulputate.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- Product -->
 <section class="bg0 p-t-23 p-b-140">
     <div class="container">
-        <div class="p-b-10">
+        <div class="p-b-40 ">
             <h3 class="ltext-103 cl5">
-                Sản Phẩm
+                Sản phẩm mới
             </h3>
-        </div>
-
-        <div class="flex-w flex-sb-m p-b-52">
-            <div class="flex-w flex-l-m filter-tope-group m-tb-10">
-                <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1" data-filter="*">
-                    Tất Cả
-                </button>
-                @foreach (var item in flavour)
-                {
-                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".@item.ID">
-                        @item.Name
-                    </button>
-                }
-            </div>
-
-            <div class="flex-w flex-c-m m-tb-10">
-                <div class="flex-c-m stext-106 cl6 size-105 pointer trans-04 m-r-8 m-tb-4">
-                    <select id="filterCategory" style="padding-right: 20px" class="form-control stext-10">
-                        <option data-filter-category="*" selected value="">Tất cả</option>
-                        @foreach (var item in categories)
-                        {
-                            <option data-filter-category=".Categories@(item.ID)" value="@item.ID">@item.Name</option>
-                        }
-                    </select>
-                </div>
-
-                <div class="flex-c-m stext-106 cl6 size-105 bor4 pointer hov-btn3 trans-04 m-tb-4 js-show-search">
-                    <i class="icon-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-search"></i>
-                    <i class="icon-close-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none"></i>
-                    Tìm kiếm
-                </div>
-            </div>
-
-            <!-- Search product -->
-            <div class="dis-none panel-search w-full p-t-10 p-b-15">
-                <div class="bor8 dis-flex p-l-15">
-                    <button class="size-113 flex-c-m fs-16 cl2 hov-cl1 trans-04">
-                        <i class="zmdi zmdi-search"></i>
-                    </button>
-
-                    <input id="search-product-view-home" class="mtext-107 cl2 size-114 plh2 p-r-15" type="search" name="search-product" placeholder="Tìm kiếm sản phẩm">
-                </div>
-            </div>
         </div>
 
         <div class="row isotope-grid">
@@ -305,7 +298,7 @@
 
         <!-- Load more -->
         <div class="flex-c-m flex-w w-full p-t-45">
-            <a href="#" class="flex-c-m stext-101 cl5 size-103 bg2 bor1 hov-btn1 p-lr-15 trans-04">
+            <a href="@Url.Action("Product", "Home")" class="flex-c-m stext-101 cl5 size-103 bg2 bor1 hov-btn1 p-lr-15 trans-04">
                 Xem Thêm
             </a>
         </div>

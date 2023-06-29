@@ -2554,6 +2554,10 @@ input.num-product::-webkit-inner-spin-button {
   min-height: 199px;
 }
 
+.size-126 {
+    min-height: 80px;
+}
+
 .size-121 {
   width: 100%;
   height: 46px;
@@ -2683,6 +2687,7 @@ input.num-product::-webkit-inner-spin-button {
 .bg7 {background-color: #333;}
 .bg8 {background-color: #f3f3f3;}
 .bg9 {background-color: rgba(255,255,255,0.9);}
+.bg10 {background-color: rgba(255,255,255,0.6);}
 
 /*---------------------------------------------*/
 .bg-overlay1::before {
@@ -2985,7 +2990,17 @@ input.num-product::-webkit-inner-spin-button {
   left: 10px;
 }
 
+/*---------------------------------------------*/
+.how-pos6-parent {
+    position: relative;
+}
 
+.how-pos6 {
+    position: absolute;
+    top: 45%;
+    left: 15px;
+    right: 15px;
+}
 
 /*---------------------------------------------*/
 .how-itemcart1 {
