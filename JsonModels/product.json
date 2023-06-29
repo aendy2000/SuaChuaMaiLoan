@@ -1,0 +1,137 @@
+[
+  {
+    "ID": 1,
+    "Name": "Sữa chua vinamilk",
+    "Price": "15.000",
+    "Description": "Sữa chua vinamilk sản xuất từ nhà Đạt Vina đậm chất đáy xã hội.",
+    "Sale": 10,
+    "ID_Categories": 1,
+    "ID_Flavour": 1
+  },
+  {
+    "ID": 2,
+    "Name": "Sữa chua bạc hà",
+    "Price": "31.000",
+    "Description": "Sữa chua bạc hà sản xuất từ nhà Đạt Vina đậm chất đáy xã hội.",
+    "Sale": 30,
+    "ID_Categories": 1,
+    "ID_Flavour": 1
+  },
+  {
+    "ID": 3,
+    "Name": "Sữa chua sữa chua tỏi ớt",
+    "Price": "39.000",
+    "Description": "Sữa chua chua tỏi ớt sản xuất từ nhà Đạt Vina đậm chất đáy xã hội.",
+    "Sale": 0,
+    "ID_Categories": 1,
+    "ID_Flavour": 2
+  },
+  {
+    "ID": 4,
+    "Name": "Sữa chua thịt xông khói",
+    "Price": "259.000",
+    "Description": "Sữa chua thịt xông khói sản xuất từ nhà Đạt Vina đậm chất đáy xã hội.",
+    "Sale": 15,
+    "ID_Categories": 1,
+    "ID_Flavour": 3
+  },
+  {
+    "ID": 5,
+    "Name": "Sữa chua heo quay đậu nành",
+    "Price": "49.000",
+    "Description": "Sữa chua heo quay đậu nành sản xuất từ nhà Đạt Vina đậm chất đáy xã hội.",
+    "Sale": 0,
+    "ID_Categories": 1,
+    "ID_Flavour": 4
+  },
+  {
+    "ID": 6,
+    "Name": "Sữa chua vinamilk",
+    "Price": "15.000",
+    "Description": "Sữa chua vinamilk sản xuất từ nhà Đạt Vina đậm chất đáy xã hội.",
+    "Sale": 10,
+    "ID_Categories": 1,
+    "ID_Flavour": 5
+  },
+  {
+    "ID": 7,
+    "Name": "Sữa chua bạc hà",
+    "Price": "31.000",
+    "Description": "Sữa chua bạc hà sản xuất từ nhà Đạt Vina đậm chất đáy xã hội.",
+    "Sale": 30,
+    "ID_Categories": 1,
+    "ID_Flavour": 6
+  },
+  {
+    "ID": 8,
+    "Name": "Sữa chua sữa chua tỏi ớt",
+    "Price": "39.000",
+    "Description": "Sữa chua chua tỏi ớt sản xuất từ nhà Đạt Vina đậm chất đáy xã hội.",
+    "Sale": 0,
+    "ID_Categories": 1,
+    "ID_Flavour": 1
+  },
+  {
+    "ID": 9,
+    "Name": "Sữa chua thịt xông khói",
+    "Price": "259.000",
+    "Description": "Sữa chua thịt xông khói sản xuất từ nhà Đạt Vina đậm chất đáy xã hội.",
+    "Sale": 15,
+    "ID_Categories": 1,
+    "ID_Flavour": 2
+  },
+  {
+    "ID": 10,
+    "Name": "Sữa chua heo quay đậu nành",
+    "Price": "49.000",
+    "Description": "Sữa chua heo quay đậu nành sản xuất từ nhà Đạt Vina đậm chất đáy xã hội.",
+    "Sale": 0,
+    "ID_Categories": 1,
+    "ID_Flavour": 3
+  },
+  {
+    "ID": 11,
+    "Name": "Sữa chua vinamilk",
+    "Price": "15.000",
+    "Description": "Sữa chua vinamilk sản xuất từ nhà Đạt Vina đậm chất đáy xã hội.",
+    "Sale": 10,
+    "ID_Categories": 1,
+    "ID_Flavour": 4
+  },
+  {
+    "ID": 12,
+    "Name": "Sữa chua bạc hà",
+    "Price": "31.000",
+    "Description": "Sữa chua bạc hà sản xuất từ nhà Đạt Vina đậm chất đáy xã hội.",
+    "Sale": 30,
+    "ID_Categories": 1,
+    "ID_Flavour": 5
+  },
+  {
+    "ID": 13,
+    "Name": "Sữa chua sữa chua tỏi ớt",
+    "Price": "39.000",
+    "Description": "Sữa chua chua tỏi ớt sản xuất từ nhà Đạt Vina đậm chất đáy xã hội.",
+    "Sale": 0,
+    "ID_Categories": 1,
+    "ID_Flavour": 6
+  },
+  {
+    "ID": 14,
+    "Name": "Sữa chua thịt xông khói",
+    "Price": "259.000",
+    "Description": "Sữa chua thịt xông khói sản xuất từ nhà Đạt Vina đậm chất đáy xã hội.",
+    "Sale": 15,
+    "ID_Categories": 1,
+    "ID_Flavour": 1
+  },
+  {
+    "ID": 15,
+    "Name": "Sữa chua heo quay đậu nành",
+    "Price": "49.000",
+    "Description": "Sữa chua heo quay đậu nành sản xuất từ nhà Đạt Vina đậm chất đáy xã hội.",
+    "Sale": 0,
+    "ID_Categories": 1,
+    "ID_Flavour": 2
+  }
+]
