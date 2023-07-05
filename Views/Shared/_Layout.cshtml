@@ -21,7 +21,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Trang chủ</title>
+    <title>@ViewBag.Title</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -94,7 +94,7 @@
             <div class="top-bar">
                 <div class="content-topbar flex-sb-m h-full container">
                     <div class="left-top-bar">
-                        MIỄN PHÍ VẬN CHUYỂN CHO ĐƠN HÀNG TRÊN 500.000 đ
+                        FREESHIP CHO ĐƠN HÀNG TỪ 500.000đ
                     </div>
 
                     <div class="right-top-bar flex-w h-full">
@@ -108,7 +108,7 @@
                 <nav class="limiter-menu-desktop container">
 
                     <!-- Logo desktop -->
-                    <a href="#" class="logo">
+                    <a href="@Url.Action("Index","Home")" class="logo">
                         <img src="@Url.Content("~/Content/images/icons/logo-01.png")" alt="IMG-LOGO">
                     </a>
 
@@ -185,7 +185,7 @@
             <div class="top-bar">
                 <div class="content-topbar flex-sb-m h-full container">
                     <div class="left-top-bar">
-                        MIỄN PHÍ VẬN CHUYỂN CHO ĐƠN HÀNG TRÊN 500.000 đ
+                        FREESHIP CHO ĐƠN HÀNG TỪ 500.000đ
                     </div>
 
                     <div class="right-top-bar flex-w h-full">
@@ -197,7 +197,7 @@
             </div>
             <!-- Logo moblie -->
             <div class="logo-mobile">
-                <a href="index.html"><img src="@Url.Content("~/Content/images/icons/logo-01.png")" alt="IMG-LOGO"></a>
+                <a href="@Url.Action("Index","Home")"><img src="@Url.Content("~/Content/images/icons/logo-01.png")" alt="IMG-LOGO"></a>
             </div>
 
             <!-- Icon header -->
