@@ -11,6 +11,7 @@ namespace SuaChuaMaiLoan.Models
         public string Phone { get; set; }
         public string Email { get; set; }
         public string Facebook { get; set; }
+        public string Zalo { get; set; }
 
     }
 }

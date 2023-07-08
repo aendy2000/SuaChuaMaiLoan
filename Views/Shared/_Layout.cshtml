@@ -94,13 +94,7 @@
             <div class="top-bar">
                 <div class="content-topbar flex-sb-m h-full container">
                     <div class="left-top-bar">
-                        FREESHIP CHO ĐƠN HÀNG TỪ 500.000đ
-                    </div>
-
-                    <div class="right-top-bar flex-w h-full">
-                        <a href="#" class="flex-c-m trans-04 p-lr-25">
-                            ĐĂNG NHẬP
-                        </a>
+                        FREESHIP TRONG PHẠM VI 5KM
                     </div>
                 </div>
             </div>
@@ -182,19 +176,7 @@
 
         <!-- Header Mobile -->
         <div class="wrap-header-mobile  how-shadow1">
-            <div class="top-bar">
-                <div class="content-topbar flex-sb-m h-full container">
-                    <div class="left-top-bar">
-                        FREESHIP CHO ĐƠN HÀNG TỪ 500.000đ
-                    </div>
 
-                    <div class="right-top-bar flex-w h-full">
-                        <a href="#" class="flex-c-m trans-04 p-lr-25">
-                            ĐĂNG NHẬP
-                        </a>
-                    </div>
-                </div>
-            </div>
             <!-- Logo moblie -->
             <div class="logo-mobile">
                 <a href="@Url.Action("Index","Home")"><img src="@Url.Content("~/Content/images/icons/logo-01.png")" alt="IMG-LOGO"></a>
@@ -278,7 +260,7 @@
                     <img src="@Url.Content("~/Content/images/icons/icon-close2.png")" alt="CLOSE">
                 </button>
 
-                <form class="wrap-search-header flex-w p-l-15">
+                <form action="@Url.Action("SearchProduct", "Home")" method="post" class="wrap-search-header flex-w p-l-15">
                     <button class="flex-c-m trans-04">
                         <i class="zmdi zmdi-search"></i>
                     </button>
@@ -441,7 +423,10 @@
 
                     <div class="p-t-27">
                         <a target="_blank" href="@resultSystemContacts.Facebook" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-                            <i class="fa fa-facebook"> </i> Facebook
+                            <i class="fa fa-facebook-square"> </i>&ensp;Facebook
+                        </a>
+                        <a target="_blank" href="@resultSystemContacts.Zalo" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+                            <i class="fa fa-comments"> </i>&ensp;Zalo
                         </a>
                     </div>
                 </div>
@@ -466,14 +451,13 @@
                 </div>*@
             </div>
 
-            <div class="p-t-40">
+            <div>
 
                 <p class="stext-107 cl6 txt-center">
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     Copyright &copy;
-                    <script>document.write(new Date().getFullYear());</script><a href="@Url.Action("Index", "Home")" target="_blank"> Sữa Chua Mai Loan <i class="fa fa-heart-o" aria-hidden="true"></i></a>. Powered by <a href="#">Dang Van Tuan</a>
+                    <script>document.write(new Date().getFullYear());</script><a href="@Url.Action("Index", "Home")" target="_blank"> Sữa Chua Mai Loan <i class="fa fa-heart-o" aria-hidden="true"></i></a>. Powered by <a target="_blank" href="https://aendy.tech">Aendy.Tech</a>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
                 </p>
             </div>
         </div>

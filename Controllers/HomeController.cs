@@ -30,6 +30,8 @@ namespace SuaChuaMaiLoan.Controllers
             string jsonTextProduct = System.IO.File.ReadAllText(filePathProduct);
             List<Products> resultProduct = JsonConvert.DeserializeObject<List<Products>>(jsonTextProduct);
 
+            Session["Ketquatimkiemsp"] = "";
+
             return View("Product", resultProduct.OrderByDescending(o => o.ID).ToList());
         }
 
@@ -41,6 +43,20 @@ namespace SuaChuaMaiLoan.Controllers
             List<Products> result = JsonConvert.DeserializeObject<List<Products>>(jsonText);
             Products products = result.Find(p => p.ID == id);
             return PartialView("_HomeProductDetail", products);
+        }
+
+        [HttpPost]
+        public ActionResult SearchProduct(string search)
+        {
+            ViewBag.ShowActive = "HomeProduct";
+            string filePath = Server.MapPath("~/JsonModels/product.json");
+            string jsonText = System.IO.File.ReadAllText(filePath);
+            List<Products> result = JsonConvert.DeserializeObject<List<Products>>(jsonText);
+            result = result.Where(p => p.Name.ToLower().Contains(search.ToLower().Trim())).ToList();
+
+            Session["Ketquatimkiemsp"] = search;
+
+            return View("Product", result.OrderByDescending(o => o.ID).ToList());
         }
 
         public ActionResult About()

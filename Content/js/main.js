@@ -310,46 +310,54 @@
 
     /*==================================================================
     [ Show modal1 ]*/
-    $('.js-show-modal1').on('click', function (e) {
+    //$('.js-show-modal1').on('click', function (e) {
+    //    e.preventDefault();
+    //    var ids = $(this).attr('name').trim();
+    //    var formData = new FormData();
+    //    formData.append('id', ids);
+
+    //    $.ajax({
+    //        url: $('#requestPath').val() + 'Home/ProductDetail',
+    //        type: 'POST',
+    //        data: formData,
+    //        dataType: 'html',
+    //        processData: false,
+    //        contentType: false,
+    //    }).done(function (ketqua) {
+    //        if (ketqua == "Error") {
+    //            swal("Đã Có Lỗi :(", "Đã có lỗi xảy ra trong quá trình thực hiện, vui lòng tải lại trang và thử lại!", "error");
+    //        }
+    //        else {
+    //            $('#contentModalChiTietSP').replaceWith(ketqua);
+    //            $.when(
+    //                $.getScript($('#requestPath').val() + 'Content/js/main.js'),
+    //                $.getScript($('#requestPath').val() + 'Content/js/slick-custom.js'),
+    //                $.Deferred(function (deferred) {
+    //                    $(deferred.resolve);
+    //                })
+    //            ).done(function () {
+    //                //place your code here, the scripts are all loaded
+    //            });
+    //            $('.js-modal1').addClass('show-modal1');
+    //        }
+    //    });
+    //});
+
+    //$('.js-hide-modal1').on('click', function () {
+    //    $('.js-modal1').removeClass('show-modal1');
+    //});
+
+
+    $('[id^="btnjsmodalproduct-"]').on('click', function (e) {
         e.preventDefault();
         var ids = $(this).attr('name').trim();
-        var formData = new FormData();
-        formData.append('id', ids);
-
-        //$.ajax({
-        //    url: $('#requestPath').val() + 'Home/ProductDetail',
-        //    type: 'POST',
-        //    data: formData,
-        //    dataType: 'html',
-        //    processData: false,
-        //    contentType: false,
-        //}).done(function (ketqua) {
-        //    if (ketqua == "Error") {
-        //        swal("Đã Có Lỗi :(", "Đã có lỗi xảy ra trong quá trình thực hiện, vui lòng tải lại trang và thử lại!", "error");
-        //    }
-        //    else {
-        //        $('#contentModalChiTietSP').replaceWith(ketqua);
-        //        $.when(
-        //            $.getScript($('#requestPath').val() + 'Content/js/main.js'),
-        //            $.getScript($('#requestPath').val() + 'Content/js/map-custom.js'),
-        //            $.getScript($('#requestPath').val() + 'Content/js/slick-custom.js'),
-        //            $.Deferred(function (deferred) {
-        //                $(deferred.resolve);
-        //            })
-        //        ).done(function () {
-        //            //place your code here, the scripts are all loaded
-        //        });
-        //        $('.js-modal1').addClass('show-modal1');
-        //    }
-        //});
-
-        $('.js-modal1').addClass('show-modal1');
-
+        $('#jsmodalproduct-' + ids).addClass('show-modal1');
     });
 
-    $('.js-hide-modal1').on('click', function () {
-        $('.js-modal1').removeClass('show-modal1');
+    $('[id^="btnjshidemodalproduct-"]').on('click', function (e) {
+        e.preventDefault();
+        var ids = $(this).attr('name').trim();
+        $('#jsmodalproduct-' + ids).removeClass('show-modal1');
     });
-
 
 })(jQuery);
