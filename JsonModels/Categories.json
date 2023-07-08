@@ -1,14 +1,10 @@
 [
   {
     "ID": 1,
-    "Name": "Yogurt"
+    "Name": "Size M"
   },
   {
     "ID": 2,
-    "Name": "Sữa Tươi"
-  },
-  {
-    "ID": 3,
-    "Name": "Bánh"
+    "Name": "Size L"
   }
 ]
