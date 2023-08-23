@@ -1,26 +1,22 @@
 [
   {
     "ID": 1,
-    "Name": "Chocolate"
+    "Name": "Matcha"
   },
   {
     "ID": 2,
-    "Name": "Dâu Tây"
+    "Name": "Việt Quất"
   },
   {
     "ID": 3,
-    "Name": "Cà Phê"
+    "Name": "Chanh Dây"
   },
   {
     "ID": 4,
-    "Name": "Bơ Sữa"
+    "Name": "Dâu Tây"
   },
   {
     "ID": 5,
-    "Name": "Sầu Riêng"
-  },
-  {
-    "ID": 6,
     "Name": "Phô Mai"
   }
 ]

@@ -1,11 +1,18 @@
-﻿@{
-    ViewBag.Title = "Liên Hệ"; 
+﻿@using SuaChuaMaiLoan.Models
+@using Newtonsoft.Json
+@{
+    ViewBag.Title = "Liên Hệ";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+    string filePathSystemContact = Server.MapPath("~/JsonModels/systemContact.json");
+    string jsonTextSystemContact = System.IO.File.ReadAllText(filePathSystemContact);
+    var resultSystemContact = JsonConvert.DeserializeObject<List<SystemContact>>(jsonTextSystemContact);
+    SystemContact resultSystemContacts = resultSystemContact.First();
 
 }
 <!-- Title page -->
 <section class="bg-img1 txt-center">
-    <iframe style="border: 1px solid #e6e6e6;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d975.8696437175814!2d108.42694961047943!3d11.941331542340212!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31716d8e655299b3%3A0xfb8b9cf4f2fcc160!2zTWFpIExvYW4gLSBZb2d1cnQgUGjDtCBNYWkgxJDDoCBM4bqhdA!5e0!3m2!1svi!2sus!4v1688038489980!5m2!1svi!2sus" width="100%" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe style="border: 1px solid #e6e6e6;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d975.8696437175814!2d108.42694961047943!3d11.941331542340212!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31716d8e655299b3%3A0xfb8b9cf4f2fcc160!2zTWFpIExvYW4gLSBZb2d1cnQgUGjDtCBNYWkgxJDDoCBM4bqhdA!5e0!3m2!1svi!2sus!4v1688038489980!5m2!1svi!2sus" width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
 <!-- Content page -->
 <section class="bg0 p-t-104 p-b-116">
@@ -43,7 +50,7 @@
                         </span>
 
                         <p class="stext-115 cl6 size-213 p-t-18">
-                            Lô G1 Khu Quy Hoạch Hoàng Văn Thụ, Phường 5, Thành phố Đà Lạt, Lâm Đồng, Việt Nam
+                            @resultSystemContacts.Address
                         </p>
                     </div>
                 </div>
@@ -59,9 +66,7 @@
                         </span>
 
                         <p class="stext-115 cl1 size-213 p-t-18">
-                            +84 979 199 184
-                            <br />
-                            +84 386 628 858
+                            <a href="tel:@resultSystemContacts.Phone.Replace(" ", "")">@resultSystemContacts.Phone</a> 
                         </p>
                     </div>
                 </div>
@@ -77,7 +82,8 @@
                         </span>
 
                         <p class="stext-115 cl1 size-213 p-t-18">
-                            contact@example.com
+                            <a href="mailto:@resultSystemContacts.Email">@resultSystemContacts.Email</a>
+
                         </p>
                     </div>
                 </div>

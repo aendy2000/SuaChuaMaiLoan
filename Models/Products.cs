@@ -10,6 +10,7 @@ namespace SuaChuaMaiLoan.Models
         public int ID { get; set; }
         public string Name { get; set; }
         public string Price { get; set; }
+        public string Images { get; set; }
         public string Description { get; set; }
         public int Sale { get; set; }
         public int ID_Categories { get; set; }

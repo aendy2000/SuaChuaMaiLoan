@@ -415,10 +415,10 @@
                         Địa chỉ: @resultSystemContacts.Address
                     </p>
                     <p class="stext-107 cl7">
-                        Điện thoại: @resultSystemContacts.Phone
+                        Điện thoại: <a href="tel:@resultSystemContacts.Phone.Replace(" ", "")">@resultSystemContacts.Phone</a>
                     </p>
                     <p class="stext-107 cl7">
-                        Email: @resultSystemContacts.Email
+                        Email: <a href="mailto:@resultSystemContacts.Email">@resultSystemContacts.Email</a>
                     </p>
 
                     <div class="p-t-27">
@@ -432,23 +432,23 @@
                 </div>
 
                 @*<div class="col-sm-6 col-lg-3 p-b-50">
-                    <h4 class="stext-301 cl0">
-                        Newsletter
-                    </h4>                    
-                    <hr class="bg-light" />
-                    <form>
-                        <div class="wrap-input1 w-full p-b-4">
-                            <input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email" placeholder="email@example.com">
-                            <div class="focus-input1 trans-04"></div>
-                        </div>
+                        <h4 class="stext-301 cl0">
+                            Newsletter
+                        </h4>
+                        <hr class="bg-light" />
+                        <form>
+                            <div class="wrap-input1 w-full p-b-4">
+                                <input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email" placeholder="email@example.com">
+                                <div class="focus-input1 trans-04"></div>
+                            </div>
 
-                        <div class="p-t-18">
-                            <button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
-                                Subscribe
-                            </button>
-                        </div>
-                    </form>
-                </div>*@
+                            <div class="p-t-18">
+                                <button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
+                                    Subscribe
+                                </button>
+                            </div>
+                        </form>
+                    </div>*@
             </div>
 
             <div>
@@ -469,7 +469,8 @@
             <i class="zmdi zmdi-chevron-up"></i>
         </span>
     </div>
-
+    <script type="text/javascript" src="https://web.cmbliss.com/webtools/hotline/js/hotline.js"></script>
+    <script type="text/javascript">$("body").hotline({ phone: " 0979 199 184", p_right: true, p_bottom: true, bottom: 40, p_left: false, left: 0, bg_color: "#2986cc", abg_color: "rgba(41, 134, 204, 0.836)", show_bar: false, position: "fixed", });</script>
 
     <!-- Your SDK code -->
     <script>
