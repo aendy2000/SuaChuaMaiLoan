@@ -1,3 +1,22 @@
-﻿@{
+﻿@using SuaChuaMaiLoan.Models
+@using Newtonsoft.Json
+@{
+    string filePathFlavour = Server.MapPath("~/JsonModels/flavour.json");
+    string jsonTextFlavour = System.IO.File.ReadAllText(filePathFlavour);
+    List<Flavour> resultFlavour = JsonConvert.DeserializeObject<List<Flavour>>(jsonTextFlavour);
+    resultFlavour = resultFlavour.OrderByDescending(o => o.Name).ToList();
+    Session["lstFlavour"] = resultFlavour;
+
+    string filePathCategories = Server.MapPath("~/JsonModels/categories.json");
+    string jsonTextCategories = System.IO.File.ReadAllText(filePathCategories);
+    List<Categories> resultCategories = JsonConvert.DeserializeObject<List<Categories>>(jsonTextCategories);
+    resultCategories = resultCategories.OrderByDescending(o => o.Name).ToList();
+    Session["lstCategories"] = resultCategories;
+
+    string filePathSystemContact = Server.MapPath("~/JsonModels/systemContact.json");
+    string jsonTextSystemContact = System.IO.File.ReadAllText(filePathSystemContact);
+    var resultSystemContact = JsonConvert.DeserializeObject<List<SystemContact>>(jsonTextSystemContact);
+    SystemContact resultSystemContacts = resultSystemContact.First();
+
     Layout = "~/Views/Shared/_Layout.cshtml";
 }

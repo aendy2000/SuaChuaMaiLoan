@@ -1647,7 +1647,7 @@ button.mfp-close {
 
 .tab01 .nav-link {
   font-family: Roboto-Regular;
-  font-size: 15px;
+  font-size: 17px;
   color: #888;
   line-height: 1.2;
 
@@ -1962,7 +1962,7 @@ input.num-product::-webkit-inner-spin-button {
 
 .table-shopping-cart .column-2 {
   width: 220px;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .table-shopping-cart .column-3 {
@@ -2174,7 +2174,7 @@ input.num-product::-webkit-inner-spin-button {
 [ S-Text 0 - 15 ]*/
 .stext-101 {
   font-family: Roboto-Medium;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.466667;
   text-transform: uppercase;
 }
@@ -2187,7 +2187,7 @@ input.num-product::-webkit-inner-spin-button {
 
 .stext-103 {
   font-family: Roboto-Regular;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.466667;
 }
 
@@ -2206,7 +2206,7 @@ input.num-product::-webkit-inner-spin-button {
 
 .stext-106 {
   font-family: Roboto-Regular;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.2;
 }
 
@@ -2230,7 +2230,7 @@ input.num-product::-webkit-inner-spin-button {
 
 .stext-110 {
   font-family: Roboto-Medium;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.466667;
 }
 
@@ -2255,25 +2255,25 @@ input.num-product::-webkit-inner-spin-button {
 
 .stext-114 {
   font-family: Roboto-Italic;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.666667;
 }
 
 .stext-115 {
   font-family: Roboto-Regular;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.666667;
 }
 
 .stext-116 {
   font-family: Roboto-Regular;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.266667;
 }
 
 .stext-117 {
   font-family: Roboto-Light;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.666667;
 }
 
@@ -2281,7 +2281,7 @@ input.num-product::-webkit-inner-spin-button {
 /*---------------------------------------------*/
 .stext-301 {
   font-family: Montserrat-Bold;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.6;
   text-transform: uppercase;
 }
