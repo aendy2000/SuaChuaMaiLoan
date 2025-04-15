@@ -98,15 +98,5 @@
     "Sale": 0,
     "ID_Categories": 2,
     "ID_Flavour": 5
-  },
-  {
-    "ID": 11,
-    "Name": "GIỎ QUÀ TẾT - GIỎ QUÀ CÁT TƯỜNG",
-    "Price": "450.000",
-    "Images": "https://firebasestorage.googleapis.com/v0/b/suachuamailoan.appspot.com/o/GioQuaTet%2Fz6221823828067_fe6c60190fbaffec43c3edb3d41cba35.jpg?alt=media&token=7f186d27-aff5-4fb3-ae92-7ea5a9baaf5f",
-    "Description": "Đây là giỏ quà Tết đặc biệt từ Nhà Mai Loan Yogurt năm nay. Mỗi sản phẩm trong giỏ quà là một Lời chúc ấm lòng, thay bạn trao gửi Tết an vui. \"GIỎ QUÀ CÁT TƯỜNG\" gồm có: 28 ly Sữa Chua đủ vị (Truyền thống, Trà Xanh, Chanh Dây, Dâu, Việt Quất). 1 set Trà Oolong Tứ Quý cao cấp. (Trà Oloong trứ danh từ Bảo Lộc, Lâm Đồng). 1 set Sữa Shua sấy lạnh Chuẩn vị nhà Mai Loan 🧀🥛.",
-    "Sale": 0,
-    "ID_Categories": 3,
-    "ID_Flavour": 6
   }
 ]
